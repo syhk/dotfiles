@@ -23,6 +23,7 @@ Plug 'morhetz/gruvbox'
 Plug 'cormacrelf/vim-colors-github'
 Plug 'voronianski/oceanic-next-color-scheme'
 Plug 'jsit/toast.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 nnoremap <C-n> :NERDTree<CR>
 
@@ -35,8 +36,8 @@ set background=light
 "colorscheme everforest
 "colorscheme github
 colorscheme toast
-"let g:github_colors_soft = 1
-"let g:github_colors_block_diffmark = 0
+let g:github_colors_soft = 1
+let g:github_colors_block_diffmark = 0
 set termguicolors
 augroup toast
   autocmd colorscheme toast hi link Constant Normal
