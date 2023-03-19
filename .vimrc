@@ -85,5 +85,8 @@ set wildmenu
 set wildmode=longest:list,full
 " 高亮当前行和列
 "set cursorcolumn
+"hi cursorcolumn cterm=underline
 set cursorline
+" 设置光标所在行显示一条下划线
+hi cursorline cterm=underline
 
