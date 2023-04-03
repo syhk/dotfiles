@@ -78,5 +78,11 @@
   {
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
+  },
+  // 配置终端打开快捷键
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
   }
 ]
