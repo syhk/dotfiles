@@ -1,0 +1,554 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.tree.renderIndentGuides": "always",
+  "files.autoSave": "afterDelay",
+  "editor.inlineSuggest.enabled": true,
+  "cmake.configureOnOpen": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+  },
+  "code-runner.runInTerminal": true, // 解决 java 终端输出乱码问题，也会影响其他语言,就是输出在终端中
+  "code-runner.executorMap": {
+    "javascript": "node",
+    "java": "cd $dir && javac -encoding utf-8 $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && chcp 65001 &&gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && chcp 65001 && g++ -g $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt", //这里加入 -g 编译加入调试信息可以在终端使用 gdb 进行调试
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "cSpell.userWords": [
+    "chaxun",
+    "cout",
+    "echarts",
+    "endl",
+    "mucics",
+    "println",
+    "stuarr",
+    "syhk",
+    "sywork"
+  ],
+
+  //
+  "fileheader.configObj": {
+    "Description": "-----> coding... <-----",
+    "Author": "git config user.name && git config user.email", // 同时获取用户名与邮箱
+    "Date": "Do not edit",
+    "autoAdd": true,
+    "annotationStr": {
+      "head": "/*",
+      "middle": "* @",
+      "end": "*/",
+      "use": true
+    }
+  },
+
+  // 头部注释
+  "fileheader.customMade": {
+    "Description": "-----> coding... <-----",
+    "Author": "git config user.name && git config user.email", // 同时获取用户名与邮箱
+    "Date": "Do not edit",
+    "autoAdd": true
+  },
+  // 函数注释
+  "fileheader.cursorMode": {
+    "description": "", // 函数注释生成之后，光标移动到这里
+    "param": "", // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
+    "return": "",
+    "Author": "syhk",
+    "Date": "Do not edit"
+  },
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#474747",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#3498DD",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "editor.fontSize": 16,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  // "[c]": {
+  //   "editor.defaultFormatter": "ms-vscode.cpptools"
+  // },
+  "cSpell.customDictionaries": {
+    "custom-dictionary-user": {
+      "name": "custom-dictionary-user",
+      "path": "~/.cspell/custom-dictionary-user.txt",
+      "addWords": true,
+      "scope": "user"
+    }
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": false
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // "editor.fontFamily": "'Fira Code', 'Operator Mono', 'iA Writer Duospace', 'Source Code Pro', Menlo, Monaco, monospace",
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.detectIndentation": true,
+
+  "java.jdt.ls.java.home": "d:\\language\\java18",
+  "editor.letterSpacing": 1,
+  "editor.inlayHints.fontFamily": "Fira Code",
+  "editor.tabCompletion": "on",
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "EnglishChineseDictionary.enableHover": true,
+  "remote.SSH.remotePlatform": {
+    "175.178.185.116": "linux",
+    "192.168.96.131": "linux",
+    "192.168.96.132": "linux"
+  },
+  "editor.guides.bracketPairs": true,
+  "materialTheme.accent": "Cyan",
+  //   "window.titleBarStyle": "native"
+  // =================================================================
+  "redhat.telemetry.enabled": true,
+  "leetcode.endpoint": "leetcode-cn",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.linkedEditing": true,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDelete": false,
+  "git.autofetch": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.editor.splitInGroupLayout": "vertical",
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "java.configuration.runtimes": [],
+  "editor.formatOnSave": true,
+
+  "clangd.checkUpdates": false,
+  "clangd.onConfigChanged": "restart",
+  "clangd.arguments": [
+    "--clang-tidy",
+    "--compile-commands-dir=build",
+    "--completion-style=bundled",
+    "--enable-config",
+    "--fallback-style=Google",
+    "--function-arg-placeholders=false",
+    // 输入建议中，已包含头文件的项与还未包含头文件的项会以圆点加以区分
+    "--header-insertion-decorators",
+    // 允许补充头文件
+    "--header-insertion=iwyu",
+    // 让 Clangd 生成更详细的日志
+    "--log=verbose",
+    // pch优化的位置(memory 或 disk，选择memory会增加内存开销，但会提升性能)
+    "--pch-storage=memory",
+    // 输出的 JSON 文件更美观
+    "--pretty",
+    // 建议排序模型
+    "--ranking-model=heuristics",
+    // 同时开启的任务数量
+    "-j=12"
+  ],
+  // 自动检测 clangd 更新
+  // clangd的snippets有很多的跳转点，不用这个就必须手动触发Intellisense了
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  // "clang.executable": "G:\\myapp2\\LLVM\bin\\clang++.exe"
+  "lldb.commandCompletions": true,
+  // LLDB 指针显示解引用内容
+  "lldb.dereferencePointers": true,
+  // LLDB 鼠标悬停在变量上时预览变量值
+  "lldb.evaluateForHovers": true,
+  // LLDB 监视表达式的默认类型
+  "lldb.launch.expressions": "simple",
+  // LLDB 不显示汇编代码
+  "lldb.showDisassembly": "always",
+  // LLDB 生成更详细的日志
+  "lldb.verboseLogging": true,
+  // 保存 cmake.sourceDirectory 或 CMakeLists.txt 内容时，不自动配置 CMake 项目目录
+  "cmake.configureOnEdit": false,
+  // 成功配置后，将 compile_commands.json 复制到此位置
+  "cmake.copyCompileCommands": "",
+  "editor.codeLensFontFamily": "Fira Code Retina",
+  /*********
+   * Color *
+   *********/
+  // 控制是否对括号着色
+  "editor.bracketPairColorization.enabled": true,
+  // 语义高亮
+  "editor.semanticHighlighting.enabled": true,
+  // 语义高亮自定义
+  // "editor.semanticTokenColorCustomizations": {
+  //   "enabled": true,
+  //   "rules": {
+  //     // 抽象符号
+  //     "*.abstract": {
+  //       "fontStyle": "italic"
+  //     },
+  //     // 只读量等效为宏
+  //     "readonly": "#4FC1FF",
+  //     // 静态量（静态变量，静态函数）
+  //     "*.static": {
+  //       "fontStyle": "bold"
+  //     },
+  //     // 宏
+  //     "macro": {
+  //       // "foreground": "#8F5DAF"
+  //       "foreground": "#4FC1FF"
+  //     },
+  //     // 成员函数
+  //     "method": {
+  //       "fontStyle": "underline"
+  //     },
+  //     // 命名空间
+  //     "namespace": {
+  //       "foreground": "#00D780"
+  //     },
+  //     // 函数参数
+  //     "parameter": {
+  //       "foreground": "#C8ECFF"
+  //     },
+  //     // 只读的函数参数
+  //     "parameter.readonly": {
+  //       "foreground": "#7BD1FF"
+  //     },
+  //     // 成员变量，似乎需要clangd12以上
+  //     "property": {
+  //       "fontStyle": "underline",
+  //       "foreground": "#C8ECFF"
+  //     },
+  //     // 类型参数
+  //     "typeParameter": "#31A567",
+  //     // 未启用的宏
+  //     "comment": "#767BA6"
+  //   }
+  // },
+  // // 括号颜色
+  // "workbench.colorCustomizations": {
+  //   "[Default Dark+]": {
+  //     "editorBracketHighlight.foreground3": "#9CDCFE",
+  //     "editorBracketHighlight.foreground4": "#F3FD00",
+  //     "editorBracketHighlight.foreground5": "#F47D9F",
+  //     "editorBracketHighlight.foreground6": "#A5ADFE"
+  //   }
+  // },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "rsp-ui.enableStartServerOnActivation": [
+    {
+      "id": "redhat.vscode-community-server-connector",
+      "name": "Community Server Connector",
+      "startOnActivation": true
+    }
+  ],
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "java.configuration.maven.globalSettings": "D:\\m2\\respository\\settings.xml",
+  "maven.executable.path": "mvn",
+  "java.maven.downloadSources": true,
+  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:jni+resolve=off -javaagent:\"c:\\Users\\沈扬\\.vscode\\extensions\\vscjava.vscode-lombok-1.0.1\\server\\lombok.jar\"",
+  "boot-java.change-detection.on": true,
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.workspaceFolder": "D:\\work\\leetcodework",
+  "vscodeGoogleTranslate.preferredLanguage": "Chinese (Simplified)",
+  "commentTranslate.googleTranslate.tld": "cn",
+  "commentTranslate.targetLanguage": "zh-CN",
+  "lldb.suppressUpdateNotifications": true,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "leetcode.hint.commentDescription": false,
+  "debug-leetcode.cppCompiler": "clang",
+  "debug-leetcode.miDebuggerPath": "G:/myapp2/w64devkit/bin/gdb.exe",
+  "leetcode.hint.commandShortcut": false,
+  "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+  "C_Cpp.inlayHints.referenceOperator.enabled": true,
+  "leetcode.outputFolder": "${difficulty",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "clang.executable": "G:/myapp2/LLVM/bin/clang++.exe",
+  "eslint.alwaysShowStatus": true,
+  // 设置显示所有的空格符和制表符  , 设置只在边界处显示
+  "editor.renderWhitespace": "boundary",
+  // 把制表符样式更换为箭头
+  "editor.insertSpaces": false,
+  // 启用背景插件
+  "background.enabled": true,
+  // 开启循环显示模式
+  "background.loop": false,
+  // 不使用默认的
+  "background.useDefault": false,
+  // 自定义图片 ，需要 用 https 协议开头的外链地址
+  "background.customImages": [
+    "https://a.com/b.png",
+    "file:///Users/somepath/a.jpg"
+  ],
+  //  一些相关的样式设置
+  "background.style": {
+    "content": "''",
+    "pointer-events": "none",
+    "position": "absolute",
+    "z-index": "99999",
+    "width": "100%",
+    "height": "100%",
+    "background-position": "100% 100%",
+    "background-repeat": "no-repeat",
+    "opacity": 1,
+    "background-size": "300px  460px" // cover 是全屏  position: "fixed" 设置这个
+  },
+
+  // 自定义图片尺寸
+  // "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.highlights.defaultHighlight": {
+    // "icon": "alter",
+    "type": "text",
+    "foreground": "#ea0f67",
+    "background": "#fff"
+    // "opacity": 50,
+    // "iconColour": "#49f69d"
+  },
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontSize": 16,
+  "C_Cpp.intelliSenseEngineFallback": "Enabled",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "nebula-theme.materialize": true,
+  "nebula-theme.themeItalics": "0 - none",
+  "doxdocgen.generic.authorName": "syhk",
+  "doxdocgen.generic.authorEmail": "shenyang620@gmail.com",
+  "workbench.colorTheme": "Nebula",
+  "workbench.colorCustomizations": {
+    "foreground": "#E06C75",
+    "editorCursor.foreground": "#ffbebc"
+  },
+  "editor.tokenColorCustomizations": {
+    "[*]": {
+      "comments": "#fc8cb794",
+      "variables": "#f18787",
+      // "functions": "#098ae0"
+      "keywords": "#2bbeeb" //关键字颜色
+      // // "numbers": "#FF0000",
+      // "strings": "#91f2ff",
+      // // "textMateRules": [],
+    }
+  },
+  "git.ignoredRepositories": [
+    "c:\\Users\\沈扬\\.vscode\\extensions\\stepsize.stepsize-1.0.14\\resources\\demo-repository"
+  ],
+  "clangd.path": "G:/myapp2/LLVM/bin/clangd.exe",
+  "python.defaultInterpreterPath": "D:\\language\\python3.11\\python.exe",
+  "search.followSymlinks": false,
+  "git.openRepositoryInParentFolders": "never",
+  // vim configuration begin =================================
+  // Esc --> jj
+  "vim.easymotion": true,
+  "vim.leader": "<space>", // leader 键映射为 space
+  "vim.searchHighlightColor": "#fd7272",
+  "vim.hlsearch": true,
+  "vim.smartRelativeLine": true,
+  // 关闭小地图
+  "editor.minimap.enabled": false,
+  // 普通模式下的键绑定
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // 使用 H L 切换标签
+    {
+      "before": ["H"],
+      "after": ["g", "T"]
+    },
+    {
+      "before": ["L"],
+      "after": ["g", "t"]
+    },
+    //格式化代码
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    // 变量符号重命名
+    {
+      "before": ["<leader>", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    // 定义速览
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    // 转到定义
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    // 转到引用
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    // 转到实现
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    // 关闭当前 tab
+    {
+      "before": ["<leader>", "<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+
+  // 可视模式
+
+  "vim.visualModeKeyBindings": [
+    // 绑定 <  > 缩进/减少缩进线
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
+    }
+  ],
+  // 不由 vim 处理的快捷键而由 vscode 原来的处理在这里面配置
+  "vim.handleKeys": {
+    "<C-f>": false,
+    // 关闭当前 tab
+    "<C-w>": false
+    // "<C-z>": false
+  },
+  // end ============================================================
+  // 相对行号
+  "editor.lineNumbers": "relative",
+  "workbench.productIconTheme": "icons-carbon",
+  "files.associations": {
+    "*.py": "python"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "errorLens.fontSize": "13px",
+  "errorLens.statusBarIconsEnabled": true,
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.gutterIconSize": "80%",
+  "errorLens.messageBackgroundMode": "message",
+  "editor.formatOnType": true,
+  "zenMode.hideLineNumbers": false,
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.general.showIconsInsteadOfTagsInStatusBar": true,
+  "cSpell.showAutocompleteSuggestions": true,
+  "search.showLineNumbers": true,
+  "remote.WSL.debug": true
+  //   {
+  //     "before": [":"],
+  //     "commands": ["workbench.action.showCommands"],
+  //     "silent": true
+  //   }
+  // ]
+}
