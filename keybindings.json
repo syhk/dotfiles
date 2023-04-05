@@ -1,18 +1,18 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
-  {
-    "key": "ctrl+b f",
-    "command": "workbench.action.toggleFullScreen",
-    "when": "!isIOS"
-  },
-  {
-    "key": "ctrl+b b",
-    "command": "workbench.action.toggleActivityBarVisibility"
-  },
-  {
-    "key": "ctrl+b p",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
+  // {
+  //   "key": "ctrl+b f",
+  //   "command": "workbench.action.toggleFullScreen",
+  //   "when": "!isIOS"
+  // },
+  // {
+  //   "key": "ctrl+b b",
+  //   "command": "workbench.action.toggleActivityBarVisibility"
+  // },
+  // {
+  //   "key": "ctrl+b p",
+  //   "command": "workbench.action.toggleSidebarVisibility"
+  // },
   // 资源管理器中对文件或目录的操作
   // 新建文件
   {

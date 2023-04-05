@@ -496,6 +496,99 @@
     {
       "before": ["<leader>", "<leader>", "c"],
       "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // 配置 <leader> + p 打开命令面板
+    {
+      "before": ["<leader>", "p"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    // 配置折叠代码
+    {
+      "before": ["<leader>", "z", "c"],
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": ["<leader>", "z", "o"],
+      "commands": ["editor.unfoldAll"]
+    },
+    // 配置 <leader> + v 垂直分屏
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    // 配置 <leader> + h 水平分屏
+    {
+      "before": ["<leader>", "h"],
+      "commands": ["workbench.action.splitEditorOrthogonal"]
+    },
+    // 配置 <leader> + c 关闭当前 tab
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    // 配置 <leader> + w + h/j/k/l 在分屏之间移动
+    {
+      "before": ["<leader>", "w", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<leader>", "w", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // 配置 <leader> + s + h/j/k/l 改变当前窗格的大小
+    {
+      "before": ["<leader>", "s", "h"],
+      "commands": ["workbench.action.increaseViewSize"]
+    },
+    {
+      "before": ["<leader>", "s", "j"],
+      "commands": ["workbench.action.decreaseViewSize"]
+    },
+    {
+      "before": ["<leader>", "s", "k"],
+      "commands": ["workbench.action.increaseViewSize"]
+    },
+    {
+      "before": ["<leader>", "s", "l"],
+      "commands": ["workbench.action.decreaseViewSize"]
+    },
+    // 配置 <leader> + w 保存当前文件
+    // {
+    //   "before": ["<leader>", "w"],
+    //   "commands": ["workbench.action.files.save"]
+    // }
+    // 配置 <leader> + , 打开终端
+    {
+      "before": ["<leader>", ","],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    // 配置 <leader> + b workbench.action.toggleActivityBarVisibility 左侧栏
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["workbench.action.toggleActivityBarVisibility"]
+    },
+    // 配置 <leader> + f workbench.action.toggleFullScreen 全屏
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.toggleFullScreen"]
+    },
+    // 配置 <leader> + p workbench.action.toggleSidebarVisibility  目录栏
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    // 配置 <leader> + s workbench.action.toggleStatusbarVisibility 状态栏
+    {
+      "before": ["<leader>", "s"],
+      "commands": ["workbench.action.toggleStatusbarVisibility"]
     }
   ],
   "vim.insertModeKeyBindings": [
@@ -522,7 +615,7 @@
   "vim.handleKeys": {
     "<C-f>": false,
     // 关闭当前 tab
-    "<C-w>": false
+    "<C-w>": true
     // "<C-z>": false
   },
   // end ============================================================
